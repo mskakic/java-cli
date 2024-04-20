@@ -1,2 +1,0 @@
-# java-cli
-Java - CLI
