@@ -5,18 +5,21 @@ import java.util.Scanner;
 
 @Command(name = "java-cli", mixinStandardHelpOptions = true, version = "1.0",
         description = "CLI Application with Picocli")
+
 public class App implements Runnable {
 
     @Override
     public void run() {
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
+
         while (running) {
+
             System.out.println("Menu:");
             System.out.println("1. Logon na OCP");
             System.out.println("2. Quit");
-
             System.out.print("Izbor: ");
+
             String choice = scanner.nextLine();
 
             switch (choice) {
@@ -33,11 +36,13 @@ public class App implements Runnable {
     }
 
     private void sendHttpRequest() {
-        // Your HTTP request code goes here
+
         System.out.println("Sending HTTP request i response za Logon...");
     }
 
     public static void main(String[] args) {
+
         CommandLine.run(new App(), args);
+
     }
 }
